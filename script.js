@@ -2,10 +2,12 @@ document.getElementById('severity').addEventListener('input', function() {
     document.getElementById('severityValue').textContent = this.value;
 });
 
-// 日付をYYYY-MM-DD形式で取得
+// 日付をYYYY-MM-DD形式で取得（JSTを保証）
 function getCurrentDate() {
     const now = new Date();
-    return now.toISOString().split('T')[0];
+    const offset = 9 * 60; // JSTはUTC+9
+    const jstDate = new Date(now.getTime() + (offset * 60 * 1000));
+    return jstDate.toISOString().split('T')[0];
 }
 
 // 症状アイテムを表示する関数
