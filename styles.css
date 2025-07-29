@@ -51,6 +51,7 @@ button:hover {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    gap: 10px;
 }
 
 .symptom-name {
@@ -70,4 +71,17 @@ button:hover {
     height: 100%;
     background-color: #007BFF;
     transition: width 0.3s ease;
+}
+
+.severity-number {
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.symptom-date {
+    width: 100px;
+    text-align: center;
+    color: #555;
 }
